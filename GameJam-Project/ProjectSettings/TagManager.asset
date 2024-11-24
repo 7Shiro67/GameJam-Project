@@ -9,11 +9,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
+  - Interactables
   - Player
-  - 
   - 
   - 
   - 
@@ -42,6 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: Background
     uniqueID: 395914919
+    locked: 0
+  - name: Ground
+    uniqueID: 2584665739
+    locked: 0
+  - name: Item
+    uniqueID: 3098569631
+    locked: 0
+  - name: Player
+    uniqueID: 3563277351
+    locked: 0
+  - name: Tips
+    uniqueID: 1731162447
     locked: 0

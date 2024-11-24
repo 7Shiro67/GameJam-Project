@@ -21,5 +21,9 @@ public class PlayerGroundedState : PlayerState
     public override void Update()
     {
         base.Update();
+        if (Input.GetKeyDown(KeyCode.F)&&player.canInteract)
+        {
+            stateMachine.ChangeState(player.interactState);
+        }
     }
 }
