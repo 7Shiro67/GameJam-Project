@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Logic
+  - ItemDrop
+  - ItemPickup
+  - Description
   layers:
   - Default
   - TransparentFX
