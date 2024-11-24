@@ -1,18 +1,20 @@
-using JetBrains.Annotations;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : Entity
 {
-    
+
     public bool isBusy { get; private set; }
+
     [Header("Move info")]
     public float moveSpeed = 5f;
+
+    [HideInInspector] public bool canInteract;
+
     public PlayerStateMachine stateMachine { get; private set; }
     public PlayerIdleState idleState { get; private set; }
     public PlayerMoveState moveState { get; private set; }
+    public PlayerInteractState interactState { get; private set; }
 
 
     protected override void Awake()
@@ -22,6 +24,7 @@ public class Player : Entity
 
         idleState = new PlayerIdleState(this, stateMachine, "Idle");
         moveState = new PlayerMoveState(this, stateMachine, "Move");
+        interactState = new PlayerInteractState(this, stateMachine, "Interact");
 
     }
 

@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.VFX;
 
 public class Entity : MonoBehaviour
 {
@@ -13,7 +9,7 @@ public class Entity : MonoBehaviour
 
     bool facingRight = true;
     public int facingDir { get; private set; } = 1;
-    
+
 
     protected virtual void Awake()
     {
@@ -25,7 +21,7 @@ public class Entity : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         cd = GetComponent<CapsuleCollider2D>();
-        
+
     }
 
     protected virtual void Update()
@@ -33,7 +29,6 @@ public class Entity : MonoBehaviour
 
     }
 
-    //角色速度设置
     #region Velocity
     public void SetZeroVelocity()
     {
@@ -47,7 +42,6 @@ public class Entity : MonoBehaviour
     }
     #endregion
 
-    //角色翻转功能
     #region Flip
     protected virtual void Flip()
     {
@@ -57,11 +51,11 @@ public class Entity : MonoBehaviour
     }
     protected virtual void FlipController(float _x)
     {
-        if(_x>0 && !facingRight)
+        if (_x > 0 && !facingRight)
         {
             Flip();
         }
-        else if(_x<0 && facingRight)
+        else if (_x < 0 && facingRight)
         {
             Flip();
         }
