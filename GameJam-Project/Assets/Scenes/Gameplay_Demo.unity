@@ -1025,7 +1025,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\u6309f\u89E6\u53D1\u5BF9\u8BDD"
 --- !u!1 &905907879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,6 +2822,10 @@ PrefabInstance:
     - target: {fileID: 268352796211641112, guid: 9cd30cfa4eef26844a1130550506cf55, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953099640566701788, guid: 9cd30cfa4eef26844a1130550506cf55, type: 3}
+      propertyPath: m_Text
+      value: "\u6309f\u89E6\u53D1\u5BF9\u8BDD"
       objectReference: {fileID: 0}
     - target: {fileID: 4957525369523286661, guid: 9cd30cfa4eef26844a1130550506cf55, type: 3}
       propertyPath: m_Name
