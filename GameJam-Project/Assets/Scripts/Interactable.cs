@@ -27,7 +27,7 @@ public class Interactable : MonoBehaviour
             dialogBox.SetActive(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.F))
         {
             dialogBox.SetActive(false);
         }
