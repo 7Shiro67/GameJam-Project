@@ -1,3 +1,4 @@
+using Kinnly;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BottonLogicScript : MonoBehaviour
 {
+
     public PauseGameScript pauseGameScript;
     // Start is called before the first frame update
     private void Start()
@@ -32,4 +34,5 @@ public class BottonLogicScript : MonoBehaviour
     {
         pauseGameScript.pauseGame();
     }
+    
 }
