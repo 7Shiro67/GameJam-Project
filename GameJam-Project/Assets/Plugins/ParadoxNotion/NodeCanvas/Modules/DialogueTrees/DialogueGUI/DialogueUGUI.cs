@@ -44,6 +44,7 @@ namespace NodeCanvas.DialogueTrees.UI.Examples
         private Vector2 originalSubsPosition;
         private bool isWaitingChoice;
 
+        public bool isRunning;
         private AudioSource _localSource;
         private AudioSource localSource {
             get { return _localSource != null ? _localSource : _localSource = gameObject.AddComponent<AudioSource>(); }
@@ -85,6 +86,7 @@ namespace NodeCanvas.DialogueTrees.UI.Examples
 
         void OnDialogueStarted(DialogueTree dlg) {
             //nothing special...
+            isRunning = true;
         }
 
         void OnDialoguePaused(DialogueTree dlg) {
@@ -95,6 +97,7 @@ namespace NodeCanvas.DialogueTrees.UI.Examples
         }
 
         void OnDialogueFinished(DialogueTree dlg) {
+            isRunning = false;
             subtitlesGroup.gameObject.SetActive(false);
             optionsGroup.gameObject.SetActive(false);
             if ( cachedButtons != null ) {
