@@ -44,7 +44,7 @@ namespace NodeCanvas.DialogueTrees.UI.Examples
         private Vector2 originalSubsPosition;
         private bool isWaitingChoice;
 
-        public bool isRunning;
+        public bool isRunning ;
         private AudioSource _localSource;
         private AudioSource localSource {
             get { return _localSource != null ? _localSource : _localSource = gameObject.AddComponent<AudioSource>(); }
