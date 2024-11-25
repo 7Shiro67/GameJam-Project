@@ -16,21 +16,12 @@ public class Interactable : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && canInteract)
-        {
-            dialogBoxText.text = text;
-            dialogBox.SetActive(true);
-        }
-
-        if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.F))
-        {
-            dialogBox.SetActive(false);
-        }
+        dialog();
     }
 
 
@@ -70,6 +61,22 @@ public class Interactable : MonoBehaviour
             }
         }
 
+    }
+    public void dialog()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && canInteract)
+        {
+            dialogBoxText.text = text;
+            dialogBox.SetActive(true);
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            return;
+        }
+        if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.F))
+        {
+            dialogBox.SetActive(false);
+        }
     }
 
 }
