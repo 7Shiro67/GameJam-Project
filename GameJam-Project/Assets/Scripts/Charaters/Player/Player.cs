@@ -8,6 +8,7 @@ public class Player : Entity
 
     [Header("Move info")]
     public float moveSpeed = 5f;
+    [HideInInspector] public bool canMove = true;
 
     [HideInInspector] public bool canInteract;
 

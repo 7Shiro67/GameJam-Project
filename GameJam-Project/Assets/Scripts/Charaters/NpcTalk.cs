@@ -6,17 +6,18 @@ public class NpcTalk : MonoBehaviour
 {
     public HUD hud;
     public DialogueUGUI ugui;
+    public Player player;
+
     [SerializeField] DialogueTreeController dialogue;
     private bool isEnter;
     public GameObject nameUI;
-
 
 
     private void Awake()
     {
         hud = FindObjectOfType<HUD>();
         ugui = FindObjectOfType<DialogueUGUI>();
-
+        player = FindObjectOfType<Player>();
     }
 
     private void Update()
@@ -26,6 +27,15 @@ public class NpcTalk : MonoBehaviour
             dialogue.StartDialogue();
             nameUI.SetActive(false);
             hud.talkUI.SetActive(false);
+        }
+
+        if(ugui.isRunning)
+        {
+            player.canMove = false;
+        }
+        else
+        {
+            player.canMove= true;
         }
 
     }
