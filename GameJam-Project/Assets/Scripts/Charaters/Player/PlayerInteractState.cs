@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.LowLevel;
+using UnityEngine.UIElements;
 
 public class PlayerInteractState : PlayerGroundedState
 {
@@ -27,7 +28,11 @@ public class PlayerInteractState : PlayerGroundedState
     public override void Update()
     {
         base.Update();
-        if(Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetMouseButtonDown(0))
+        {
+            return;
+        }
+        if(Input.anyKeyDown )
         {
             stateMachine.ChangeState(player.idleState);
         }

@@ -10,25 +10,29 @@ public class ItemInfo : MonoBehaviour
     {
         description = GameObject.FindGameObjectWithTag("Description").GetComponent<Text>();
     }
-    public void item1()
+    public void item0()
     {
         description.text = "这是钻石";
     }
-    public void item2()
+    public void item1()
     {
         description.text = "这是铜锭";
     }
-    public void item3()
+    public void item2()
     {
         description.text = "这是铁锭";
     }
-    public void item4()
+    public void item3()
     {
         description.text = "这是金锭";
     }
+    public void item4()
+    {
+        description.text = "一朵梦境里的蓝花";
+    }
     public void item5()
     {
-        description.text = "这是钻石";
+        description.text = "一朵梦境里的红花";
     }
     public void item6()
     {
@@ -59,10 +63,6 @@ public class ItemInfo : MonoBehaviour
         description.text = "这是钻石";
     }
     public void item13()
-    {
-        description.text = "这是钻石";
-    }
-    public void item14()
     {
         description.text = "这是钻石";
     }
