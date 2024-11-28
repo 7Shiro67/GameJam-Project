@@ -6,6 +6,10 @@ public class CameraFollow2D : MonoBehaviour
     public float smoothTime = 0.5f; // 平滑跟随的时间
     private Vector3 velocity = Vector3.zero; // 相机移动的速度
 
+    void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("CameraPoint").GetComponent<Transform>();
+    }
     void FixedUpdate()
     {
         if (target != null)

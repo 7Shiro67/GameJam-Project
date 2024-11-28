@@ -7,7 +7,10 @@ public class Teleport : MonoBehaviour
     public GameObject targetPosition1;
     public GameObject targetPosition2;
     public GameObject playerPosition;
-    
+    void Start()
+    {
+
+    }
     public void teleport()
     {
         if (playerPosition.transform.position.y > -5)

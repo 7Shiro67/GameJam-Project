@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class BottonLogicScript : MonoBehaviour
 {
-    public Text LocationName;
+    
 
     public PauseGameScript pauseGameScript;
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class BottonLogicScript : MonoBehaviour
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(0);
     }
-    public void continueGame()
+    public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -28,25 +28,10 @@ public class BottonLogicScript : MonoBehaviour
     {
         Application.Quit();
     }
-    public void startGame()
-    {
-
-    }
     public void continueInGame()
     {
         pauseGameScript.pauseGame();
     }
-    private bool LocationState = false;
-    public void sceneChanger()
-    {
-        LocationState = !LocationState;
-        if (LocationState)
-        {
-            LocationName.text = "ÃÎ¾³";
-        }
-        else
-        {
-            LocationName.text = "É¯ÃÎµÄ¼Ò";
-        }
-    }
+
+    
 }

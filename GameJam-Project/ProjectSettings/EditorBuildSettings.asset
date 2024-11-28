@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: 027d45128a50ab54489a7ca3b8ade495
   - enabled: 1
+    path: Assets/Scenes/Gameplay_Demo_Noirco.unity
+    guid: fe3ca64d22117434ea3908329ce0db19
+  - enabled: 1
     path: Assets/Scenes/Gameplay_Demo.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

@@ -9,6 +9,8 @@ TagManager:
   - ItemPickup
   - Description
   - Item_D_B
+  - CameraPoint
+  - Bag
   layers:
   - Default
   - TransparentFX
